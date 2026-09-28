@@ -70,8 +70,6 @@ File MUSHclient\mushclient_prefs.sqlite
 File MUSHclient\MUSHclient.ini
 SetOutPath $INSTDIR\worlds
 File MUSHclient\worlds\Aardwolf.mcl
-SetOutPath $INSTDIR\worlds\plugins\state
-File /nonfatal MUSHclient\worlds\plugins\state\*
 SetOutPath $INSTDIR
 
 SectionEnd ; Installation section
