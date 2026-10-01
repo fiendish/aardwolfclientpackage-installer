@@ -52,6 +52,12 @@ Section "" ; No components page, name not important
 ; Set output path to the installation directory.
 SetOutPath $INSTDIR
 
+; Create the plugin state folder without installing saved state files.
+ClearErrors
+CreateDirectory "$INSTDIR\worlds\plugins\state"
+IfErrors 0 +2
+Abort "Cannot create the plugin state folder."
+
 ; Write the installation path into the registry
 WriteRegStr HKCU "Software\AardwolfMUSHclient" "Install_Dir" "$INSTDIR"
 
